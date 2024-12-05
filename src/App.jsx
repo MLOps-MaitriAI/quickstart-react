@@ -60,8 +60,13 @@ const App = () => {
 
   // call start handler
   const startCallInline = () => {
+    if (localStorage.getItem('featureUsed')) {
+      alert('You can only use this feature once.');
+      return;
+    }
     setConnecting(true);
     vapi.start(assistantOptions);
+    localStorage.setItem('featureUsed', 'true');
   };
   const endCall = () => {
     vapi.stop();
@@ -215,7 +220,7 @@ const PleaseSetYourPublicKeyMessage = () => {
 const ReturnToDocsLink = () => {
   return (
     <a
-      href="https://maitriai.com/"
+      href="https://maitriai-chatbot.streamlit.app/"
       target="_blank"
       rel="noopener noreferrer"
       style={{
