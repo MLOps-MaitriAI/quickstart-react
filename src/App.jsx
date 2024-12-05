@@ -215,7 +215,7 @@ const PleaseSetYourPublicKeyMessage = () => {
 const ReturnToDocsLink = () => {
   return (
     <a
-      href="https://maitriai-chatbot.streamlit.app/"
+      href="https://maitriai.com/"
       target="_blank"
       rel="noopener noreferrer"
       style={{
