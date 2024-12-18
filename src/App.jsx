@@ -79,7 +79,7 @@ const App = () => {
     >
       {!connected ? (
         <Button
-          label="Call Vapi’s Pizza Front Desk"
+          label="Call Maitri AI"
           onClick={startCallInline}
           isLoading={connecting}
         />
